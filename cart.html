@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen" id="background">
+
+    <header class="bg-indigo-950 text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <img src="img/Sneak Peak.jpg" class="avatar">
+            <h1 class="text-xl font-bold">Sneak cart</h1>
+            <a href="prob.html" class="bg-blue-500 px-4 py-2 rounded-full">Назад в магазин</a>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto py-3 px-9">
+        <h2 class="text-2xl font-bold mb-4">Ваши товары</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="flex gap-4 mt-4">
+            <button id="clearCartButton" onclick="clearCart()" class="clear-cart-button">Очистить корзину</button>
+            <button id="payCart" onclick="calculateTotal()" class="chekout-button">Оплатить</button>
+        </div>
+        <div id="totalAmount" class="text-xl font-bold mt-4"></div>
+        <div id="discountedTotal" class="text-xl font-bold mt-4"></div>
+    </main>
+    
+    
+
+    <h1>Испытай удачу! Рулетка на скидку</h1>
+    <div class="wheel-container">
+        <div class="pointer"></div>
+        <div id="wheel" class="wheel">
+            <div class="wheel-text">
+                <div class="segment-1">50%</div>
+                <div class="segment-2">40%</div>
+                <div class="segment-3">30%</div>
+                <div class="segment-4">20%</div>
+                <div class="segment-5">10%</div>
+            </div>
+        </div>
+    </div>
+    <button id="spinButton" onclick="spinWheel()">Крутить рулетку</button>
+    <div id="result"></div>
+
+    <footer class="bg-indigo-950 text-white py-4 mt-8">
+        <div class="container mx-auto text-center px-4">
+            <p>Для связи с нами можете не звонить на наш номер: 102 или +7‒747‒854‒79‒15</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
